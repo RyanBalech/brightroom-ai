@@ -98,6 +98,7 @@ eval/               test cases, runner, baseline prompt + outputs, results
 tests/              pytest (engine, extractor, guardrail, mocked LLM path, MCP server)
 docs/               screenshots
 DEMO_SCRIPT.md      4-minute demo video script
+demo/               narration text + script that records the narrated demo video (python demo/record.py)
 ```
 
 All company data, enquiries and records are fictional teaching material from the case. Additional test enquiries
