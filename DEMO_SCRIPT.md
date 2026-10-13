@@ -1,8 +1,8 @@
 # Demo video script (target 4 minutes)
 
-Setup before recording: set `BRIGHTROOM_OFFLINE=1`, then run `streamlit run app.py` with the browser at full width
-(zoom 90 %). Pre-open tabs with deep links
-so each case loads instantly: `localhost:8501/?case=T03`, `?case=T02`, `?case=T05`, `?case=T04`.
+Setup before recording: set `ANTHROPIC_API_KEY` locally, leave `BRIGHTROOM_OFFLINE` unset, then run
+`streamlit run app.py` with the browser at full width (zoom 90 %). Select cases in the app; demo deep links run
+automatically and would make extra API calls. Use Claude only for T02; switch it off for the other cases.
 The **Test evidence** tab has a live "Re-run all 36 tests" button for the results section.
 
 ---
@@ -23,17 +23,19 @@ The **Test evidence** tab has a live "Re-run all 36 tests" button for the result
 > every draft. An agent would add cost and unpredictability without adding value for a six-item catalogue."
 
 **1:10–1:50 · Routine case (T03, wheelchair)**
-- Load *T03* (the deep link prepares the draft automatically). Point at: 🟢 status, the brief split into confirmed/optional/missing,
+- Select *T03*, switch **Use Claude** off, and click **Prepare draft**. Point at: 🟢 status, the brief split into confirmed/optional/missing,
   *"Studio is cheaper but excluded: stairs only"*, itemised table €535, margin €65.
 - Tick the review box, then **Approve**: "Nothing is sent or booked; the salesperson copies the text."
 
 **1:50–3:00 · Difficult / failure cases**
-- Load *T02* (€850 budget): 🔴 **€90 OVER budget**. "The tool never silently drops coffee or lunch. Each alternative
+- Select *T02*, switch **Use Claude** on, and click **Prepare draft**. Open **Evidence** to show
+  `Extractor: llm+rules`; point at `cover note: llm` and 🔴 **€90 OVER budget**. "The tool never silently drops coffee or lunch. Each alternative
   states its trade-off: 16 people, or no coffee, or no lunch, or raise the budget, and each is marked as changing a
   must-have."
-- Load *T05* (30 people, 6 h, "confirm today"): two blockers and the *cannot confirm* warning. Alternatives: 24 people
+- Switch **Use Claude** off. Select *T05* (30 people, 6 h, "confirm today") and click **Prepare draft**: two blockers
+  and the *cannot confirm* warning. Alternatives: 24 people
   for 4 h (€852), or two separate 15-person bookings (€1,380), each with its trade-offs.
-- Load *T04* ("best offer next month"): 🔵 no prices at all, just the five questions to ask. "Here the baseline
+- Select *T04* ("best offer next month") and click **Prepare draft**: 🔵 no prices at all, just the five questions to ask. "Here the baseline
   invented an 'illustrative' 10-person package."
 - (Optional) Type a new enquiry live, e.g. *"We're about 9, one person uses crutches, coffee please, €300"* → Loft
   required, over budget, never the Studio.
