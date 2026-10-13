@@ -1,7 +1,7 @@
 # Demo video script (target 4 minutes)
 
 Setup before recording: `streamlit run app.py`, browser at full width (zoom 90 %). Pre-open tabs with deep links
-so each case loads instantly: `localhost:8501/?case=T03`, `?case=T02`, `?case=T05`, `?case=T04`.
+so each case loads instantly: `localhost:8611/?case=T03`, `?case=T02`, `?case=T05`, `?case=T04`.
 The **Test evidence** tab has a live "Re-run all 36 tests" button for the results section.
 
 ---

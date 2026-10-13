@@ -41,7 +41,7 @@ python -m eval.run_eval --offline --cases blind2_cases.json    # independent set
 
 ![Infeasible request: status, budget margin, brief, checks, client draft and alternatives](docs/screenshot-infeasible.png)
 
-Demo deep links: `http://localhost:8501/?case=T02` loads and runs a test enquiry (any id from `eval/cases.json`).
+Demo deep links: `http://localhost:8611/?case=T02` loads and runs a test enquiry (any id from `eval/cases.json`).
 
 ## MCP server — use the engine from Claude
 
