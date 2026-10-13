@@ -2,51 +2,61 @@
  {
   "id": "s01_title",
   "text": "Hello. We are Romaissae Melhaoui and Ryan Balech, and this is our solution for Case two: from a client enquiry to a feasible proposal.",
-  "duration": 8.2
+  "duration": 8.2,
+  "ref_duration": 8.2
  },
  {
   "id": "s02_problem",
   "text": "BrightRoom organises half-day workshops for small companies. Its salesperson receives informal enquiries, such as: a team day for about fifteen people, with food, within a modest budget. Today, they clarify the brief, check a short catalogue, calculate a package, and write a proposal by hand. It is repetitive, and the worst mistake is a polished proposal that quietly breaks the brief. Our user is the salesperson. Our value target is efficiency, with decision support: a first draft in seconds, and feasibility made visible before anything is sent. Our baseline is a single prompt to a chat assistant, with the catalogue pasted in.",
-  "duration": 38.68
+  "duration": 38.68,
+  "ref_duration": 38.68
  },
  {
   "id": "s03_solution",
-  "text": "Our solution is an assistant application: one fixed workflow, not an autonomous agent. Generative A I does the language work: reading the enquiry, and writing the cover note. Code does everything that must be exact: the venue, capacity, accessibility, the four hour limit, prices, totals, and the budget check. And a human approves every draft. With a six item catalogue, an agent would add cost and unpredictability, without adding value. The same engine is also available as an M C P server, so it can be used directly from Claude.",
-  "duration": 32.88
+  "text": "Our solution is an assistant application: one fixed workflow, not an autonomous agent. Generative AI does the language work: reading the enquiry, and writing the cover note. Code does everything that must be exact: the venue, capacity, accessibility, the four hour limit, prices, totals, and the budget check. And a human approves every draft. With a six item catalogue, an agent would add cost and unpredictability, without adding value. The same engine is also available as an MCP server, so it can be used directly from Claude.",
+  "duration": 32.88,
+  "ref_duration": 32.88
  },
  {
   "id": "s04_routine",
   "text": "Here is a routine enquiry: ten people, four hours, wheelchair access, coffee and a projector, with a budget of six hundred euros. We press Prepare draft. The status is green: feasible. The brief is split into confirmed requirements and missing information. The engine chose the Loft, and it tells us why: the Studio is cheaper, but it has stairs only. The itemised total is five hundred and thirty five euros, sixty five under budget.",
-  "duration": 26.98
+  "duration": 26.98,
+  "ref_duration": 26.98
  },
  {
   "id": "s05_approve",
   "text": "Nothing is sent automatically. The salesperson ticks the review box, approves, and then copies or downloads the draft.",
-  "duration": 7.11
+  "duration": 7.11,
+  "ref_duration": 7.11
  },
  {
   "id": "s06_budget",
   "text": "Now a difficult case. Twenty people, with coffee and lunch required, and a budget of eight hundred and fifty euros. The status is red. The package costs nine hundred and forty euros, which is ninety over budget. The tool never drops coffee or lunch silently to make the numbers work. Instead, it lists alternatives, and each one states its trade-off: sixteen people instead of twenty, no coffee break, no lunch, or a higher budget.",
-  "duration": 26.33
+  "duration": 26.33,
+  "ref_duration": 26.33
  },
  {
   "id": "s07_capacity",
   "text": "This client asks for thirty people, for six hours, and wants it confirmed today. There are two blockers: the largest venue holds twenty four people, and bookings last four hours. The tool also warns that nothing can be confirmed, because availability has not been checked.",
-  "duration": 15.88
+  "duration": 15.88,
+  "ref_duration": 15.88
  },
  {
   "id": "s08_missing",
   "text": "And when key information is missing, as here, where there is no headcount, the tool gives no prices at all. It only prepares the questions to ask. In this case, the single prompt baseline invented an example package for ten people.",
-  "duration": 13.91
+  "duration": 13.91,
+  "ref_duration": 13.91
  },
  {
   "id": "s09_evidence",
   "text": "Now the evidence. We ran sixteen test enquiries through both the baseline and our prototype. The prototype passed sixteen out of sixteen. The baseline passed twelve, with two partial, and two failures. To be fair, the baseline's arithmetic was always right. Its failures were promises, such as, we can confirm this option now, and services from outside the catalogue. We also had two blind test sets written independently, without access to our code. On the first run, the prototype scored five out of ten, and then seven out of ten on the second set. Every miss was in reading the enquiry, never in the pricing. After fixing those gaps, all thirty six tests pass, as you can see here, running live.",
-  "duration": 42.35
+  "duration": 42.35,
+  "ref_duration": 42.35
  },
  {
   "id": "s10_limits",
-  "text": "Our limitations. The offline, rule based reader is brittle on unusual wording. That is where the Claude reader helps, with every number tied to a quote from the enquiry. We used the Claude API for a live Q two check: it extracted the brief, returned the correct infeasible status and nine hundred forty euro total, and wrote the cover note. Broader live accuracy still needs testing. The baseline was graded with a rubric, one sample per case. Next, we will test more enquiries with Claude and measure salesperson review time. Thank you for watching.",
-  "duration": 30.19
+  "text": "Our limitations. The offline, rule based reader is brittle on unusual wording. That is where the Claude reader helps, with every number tied to a quote from the enquiry. We used the Claude API for a live check on enquiry Q2: it extracted the brief, returned the correct infeasible status and nine hundred forty euro total, and wrote the cover note. Broader live accuracy still needs testing. The baseline was graded with a rubric, one sample per case. Next, we will test more enquiries with Claude and measure salesperson review time. Thank you for watching.",
+  "duration": 30.19,
+  "ref_duration": 30.19
  }
 ]
