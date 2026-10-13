@@ -1,8 +1,8 @@
 # Demo video script (target 4 minutes)
 
-Setup before recording: `streamlit run app.py`, browser at full width (zoom 90 %). Pre-open tabs with deep links
+Setup before recording: `python api.py`, browser at full width. Pre-open tabs with deep links
 so each case loads instantly: `localhost:8611/?case=T03`, `?case=T02`, `?case=T05`, `?case=T04`.
-The **Test evidence** tab has a live "Re-run all 36 tests" button for the results section.
+The **Test evidence** page has a live "Run all tests" button for the results section.
 
 ---
 
@@ -38,7 +38,7 @@ The **Test evidence** tab has a live "Re-run all 36 tests" button for the result
   required, over budget, never the Studio.
 
 **3:00–3:45 · Evidence**
-- Open the **Test evidence** tab, click **Re-run all 36 tests now** (all pass in under a second), and scroll the
+- Open the **Test evidence** tab, click **Run all tests** (36 squares fill in green), and scroll the
   baseline vs prototype table.
 > "On 16 designed tests the prototype passes 16 out of 16; the single-prompt baseline passes 12, with 2 partial and
 > 2 failures. The baseline's arithmetic was right every time; its failures were promises and scope: 'we can confirm
