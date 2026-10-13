@@ -2,8 +2,9 @@
 
 **Baseline**: the exact prompt in `eval/baseline.py` (catalogue + rules + enquiry, "write a proposal with itemised
 prices and a total"), one sample per case. Raw outputs: `eval/baseline_outputs/T*.md`.
-**How it was generated**: no API key was available on the build machine, so each prompt was answered by a fresh
-Claude (Sonnet) sub-agent instructed to answer it as a plain chat assistant, with no access to the prototype code.
+**How it was generated**: each prompt was answered by a fresh Claude (Sonnet) sub-agent instructed to answer it as a
+plain chat assistant, with no access to the prototype code. The separate prototype received one live Claude API
+smoke test on Q2, reported in `APPENDIX.md`.
 Re-generate with the API using `python -m eval.baseline`.
 
 **Rubric** (same as the prototype): PASS only if (a) the total for the request is correct, (b) the venue is valid,

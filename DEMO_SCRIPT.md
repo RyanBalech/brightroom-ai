@@ -53,5 +53,5 @@ Show the How it works tab.
 
 **3:45–4:00 · Limitations and next step**
 > "The rules extractor is brittle on open-vocabulary requests; that's where the Claude extractor comes in, and it's
-> cross-checked against the rules. One live Q2 check passed; the other 35 cases have only offline or mocked results.
-> Next: measure salesperson review time and add availability checks."
+> cross-checked against the rules. Our live Claude API check of Q2 passed with the correct €940 total and no audit
+> violations. Next: evaluate more live enquiries, measure review time, and add availability checks."

@@ -85,7 +85,7 @@ request, and the approval checkbox wording changes to "I understand the brief ca
 ## 2 · Reproduce the demo
 
 See [README.md](README.md). In short: `pip install -r requirements.txt`, then `streamlit run app.py`, then pick a test
-enquiry and click **Prepare draft**. Everything runs offline. Setting `ANTHROPIC_API_KEY` turns on Claude extraction
+enquiry and click **Prepare draft**. Rules-only mode runs offline. Setting `ANTHROPIC_API_KEY` turns on Claude extraction
 and the cover note. Prompts and schema: `brightroom/llm.py` (`EXTRACTION_SYSTEM`, `EXTRACTION_SCHEMA`,
 `COVER_SYSTEM`). Baseline prompt: `eval/baseline.py`.
 
@@ -145,11 +145,11 @@ and keeps a human approval step.
 | Reproducibility | varies by person | varies run to run | deterministic engine; LLM only for extraction and prose |
 
 ### 3.4 Limitations (honest)
-- **Live Claude evidence is limited to one smoke test.** On 13 October 2026, Q2 returned INFEASIBLE and €940
+- **The Claude API was used for a live Q2 smoke test.** On 13 October 2026, Q2 returned INFEASIBLE and €940
   with `llm+rules` extraction and an LLM cover note; there were no API errors or text-audit violations. The other
   35 enquiries have not been evaluated with live Claude, so its general extraction quality remains unverified.
-  Mocked tests cover grounding, cross-check, guardrail and API-failure fallback. The baseline outputs were produced
-  by Claude sub-agents answering the exact baseline prompt, not through the API.
+  Mocked tests cover grounding, cross-check, guardrail and API-failure fallback. The separate baseline outputs were
+  produced by Claude sub-agents answering the exact baseline prompt.
 - The rule extractor is brittle on unseen phrasing (blind runs above). It is a fallback, not the intended
   production extractor.
 - Baseline: one sample per case, graded by the builder. Raw outputs are included so a human can re-grade.
