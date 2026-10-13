@@ -86,7 +86,7 @@ def main() -> None:
     ap.add_argument("--offline", action="store_true")
     ap.add_argument("--cases", default="cases.json", help="cases file in eval/ (e.g. heldout_cases.json)")
     a = ap.parse_args()
-    cases = json.loads((HERE / a.cases).read_text())
+    cases = json.loads((HERE / a.cases).read_text(encoding="utf-8"))
     tag = {"cases.json": "prototype", "heldout_cases.json": "heldout"}.get(a.cases, a.cases.removesuffix("_cases.json"))
     rows, dump = [], []
     t0 = time.perf_counter()
@@ -109,8 +109,10 @@ def main() -> None:
     md = [f"# {tag.capitalize()} results — {passed}/{len(dump)} pass (extractor: {mode}, "
           f"total runtime {time.perf_counter() - t0:.2f}s)", "",
           "| ID | Type | Expected behaviour | Prototype result | Judgement |", "|---|---|---|---|---|", *rows]
-    (HERE / f"results_{tag}.md").write_text("\n".join(md) + "\n")
-    (HERE / f"results_{tag}.json").write_text(json.dumps(dump, indent=1, ensure_ascii=False))
+    (HERE / f"results_{tag}.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    (HERE / f"results_{tag}.json").write_text(
+        json.dumps(dump, indent=1, ensure_ascii=False), encoding="utf-8"
+    )
     print(f"\n{passed}/{len(dump)} passed")
 
 

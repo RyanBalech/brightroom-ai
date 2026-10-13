@@ -22,7 +22,7 @@ The **Test evidence** tab has a live "Re-run all 36 tests" button for the result
 > every draft. An agent would add cost and unpredictability without adding value for a six-item catalogue."
 
 **1:10–1:50 · Routine case (T03, wheelchair)**
-- Load *T03*. Click **Prepare draft**. Point at: 🟢 status, the brief split into confirmed/optional/missing,
+- Load *T03* (the deep link prepares the draft automatically). Point at: 🟢 status, the brief split into confirmed/optional/missing,
   *"Studio is cheaper but excluded: stairs only"*, itemised table €535, margin €65.
 - Tick the review box, then **Approve**: "Nothing is sent or booked; the salesperson copies the text."
 
@@ -50,8 +50,7 @@ The **Test evidence** tab has a live "Re-run all 36 tests" button for the result
 Desktop: Claude talks, but every price comes from `price_brief`, and every message passes `check_draft`."
 Show the How it works tab.
 
-**3:45–4:15 · Limitations and next step**
+**3:45–4:00 · Limitations and next step**
 > "The rules extractor is brittle on open-vocabulary requests; that's where the Claude extractor comes in, and it's
-> cross-checked against the rules. The LLM path is implemented and unit-tested with a mocked client, but we did not
-> run it live in this sprint (no API key on the build machine). Next: run the eval with the LLM on, log real
-> preparation time with the salesperson, and connect the availability check."
+> cross-checked against the rules. Mocked tests pass, but live Claude behaviour remains unverified. Next: evaluate
+> it live, measure salesperson review time, and add availability checks."

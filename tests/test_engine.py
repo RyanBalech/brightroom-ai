@@ -11,7 +11,7 @@ from brightroom.extract_rules import extract_rules
 from brightroom.pipeline import run
 from eval.run_eval import check
 
-CASES = json.loads((pathlib.Path(__file__).parents[1] / "eval" / "cases.json").read_text())
+CASES = json.loads((pathlib.Path(__file__).parents[1] / "eval" / "cases.json").read_text(encoding="utf-8"))
 
 
 @pytest.mark.parametrize("case", CASES, ids=[c["id"] for c in CASES])

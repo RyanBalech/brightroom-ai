@@ -104,7 +104,7 @@ STATUS_STYLE = {
                           "var(--info)", "var(--info-tint)"),
 }
 
-CASES = {c["id"]: c for c in json.loads((ROOT / "eval" / "cases.json").read_text())}
+CASES = {c["id"]: c for c in json.loads((ROOT / "eval" / "cases.json").read_text(encoding="utf-8"))}
 SAMPLE_GROUPS = {
     "Routine": [("T03", "Q3 · wheelchair + projector"), ("T01", "Q1 · 10 people, coffee"), ("T10", "Français")],
     "Difficult": [("T02", "Q2 · over budget"), ("T05", "Q5 · 30 people, 6 h"), ("T07", "Wheelchair trap"),
@@ -290,7 +290,7 @@ with tab_eval:
         from eval.run_eval import check
         rows, summary = [], {}
         for fname, label in [("cases.json", "Designed"), ("heldout_cases.json", "Blind 1"), ("blind2_cases.json", "Blind 2")]:
-            cs = json.loads((ROOT / "eval" / fname).read_text())
+            cs = json.loads((ROOT / "eval" / fname).read_text(encoding="utf-8"))
             ok_n = 0
             for c in cs:
                 o = run(c["enquiry"], use_llm=False)
@@ -304,11 +304,11 @@ with tab_eval:
         st.dataframe(rows, hide_index=True, use_container_width=True)
 
     base = {}
-    for line in (ROOT / "eval" / "results_baseline.md").read_text().splitlines():
+    for line in (ROOT / "eval" / "results_baseline.md").read_text(encoding="utf-8").splitlines():
         m = re.match(r"\| (T\d+) \|.*\| ([^|]+) \|$", line)
         if m:
             base[m.group(1)] = m.group(2).strip()
-    proto = {d["id"]: d for d in json.loads((ROOT / "eval" / "results_prototype.json").read_text())}
+    proto = {d["id"]: d for d in json.loads((ROOT / "eval" / "results_prototype.json").read_text(encoding="utf-8"))}
     table = [{"ID": cid, "Enquiry": c["enquiry"], "Expected": c["expected"]["behaviour"],
               "Baseline": base.get(cid, "—"),
               "Prototype": ("PASS · " if proto[cid]["pass"] else "FAIL · ") + proto[cid]["status"]}
