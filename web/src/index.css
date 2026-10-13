@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --color-ink: #17161d;
+  --color-ink-2: #4b4a57;
+  --color-ink-3: #8b8a96;
+  --color-line: #e8e6ef;
+  --color-canvas: #f7f6fb;
+  --color-brand-50: #f1f0fb;
+  --color-brand-100: #e4e2f7;
+  --color-brand-500: #5b54d6;
+  --color-brand-600: #4a43c4;
+  --color-brand-700: #3a339f;
+  --color-brand-900: #1f1c57;
+  --color-sun: #fbbf24;
+}
+
+html, body, #root { height: 100%; }
+body { @apply bg-canvas text-ink font-sans antialiased; }
+
+.glass { background: rgba(255,255,255,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.card { @apply bg-white rounded-2xl border border-line shadow-[0_1px_2px_rgba(23,22,29,.04),0_8px_24px_-12px_rgba(23,22,29,.08)]; }
+.label { @apply text-[11px] font-semibold uppercase tracking-[.08em] text-ink-3; }
+
+/* client draft markdown */
+.draft h4 { @apply mt-5 mb-2 text-[13px] font-semibold uppercase tracking-[.06em] text-ink-3; }
+.draft p { @apply my-2 leading-relaxed text-ink-2 text-[14.5px]; }
+.draft strong { @apply text-ink font-semibold; }
+.draft ul, .draft ol { @apply my-2 pl-5 space-y-1 text-[14px] text-ink-2; }
+.draft ul { @apply list-disc; } .draft ol { @apply list-decimal; }
+.draft table { @apply w-full my-3 text-[13.5px] border-separate border-spacing-0 overflow-hidden rounded-xl border border-line; }
+.draft th { @apply bg-canvas text-left font-semibold text-ink-2 px-3 py-2 border-b border-line; }
+.draft td { @apply px-3 py-2 border-b border-line text-ink tabular-nums; }
+.draft tr:last-child td { @apply border-b-0 bg-brand-50/60; }
+.draft th:not(:first-child), .draft td:not(:first-child) { @apply text-right; }
+
+.bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(74,67,196,.10) 1px, transparent 0);
+  background-size: 22px 22px;
+}

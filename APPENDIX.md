@@ -2,7 +2,7 @@
 
 **Team:** Romaissae Melhaoui · Ryan Balech  
 **Contributions:** both members worked together on every part — scoping, design, building the prototype, testing and the demo video (prototype built with Claude Code as coding assistant).
-**Tools used:** Claude Code (Claude Opus 5.5) for building; Python 3.13, Streamlit 1.65, Anthropic Python SDK 1.13, MCP Python SDK 2.3;
+**Tools used:** Claude Code (Claude Opus 5.5) for building; Python 3.13, FastAPI, React 19 + Vite + Tailwind + Framer Motion (front end), Streamlit 1.65 (backup UI), Anthropic Python SDK 1.13, MCP Python SDK 2.3;
 runtime LLM (optional) `claude-opus-5`.
 **Data:** the fictional catalogue and enquiries Q1–Q5 from the case pack. Every other enquiry is a labelled
 addition (T06–T16 written by us; H01–H20 written by independent agents that never saw our code).
@@ -84,8 +84,9 @@ request, and the approval checkbox wording changes to "I understand the brief ca
 
 ## 2 · Reproduce the demo
 
-See [README.md](README.md). In short: `pip install -r requirements.txt`, then `streamlit run app.py`, then pick a test
-enquiry and click **Prepare draft**. Rules-only mode runs offline. Setting `ANTHROPIC_API_KEY` turns on Claude extraction
+See [README.md](README.md). In short: `pip install -r requirements.txt`, then `python api.py` and open
+http://localhost:8611, then pick a test enquiry and click **Prepare draft**. Rules-only mode runs offline.
+Setting `ANTHROPIC_API_KEY` turns on Claude extraction
 and the cover note. Prompts and schema: `brightroom/llm.py` (`EXTRACTION_SYSTEM`, `EXTRACTION_SCHEMA`,
 `COVER_SYSTEM`). Baseline prompt: `eval/baseline.py`.
 

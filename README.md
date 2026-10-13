@@ -21,9 +21,10 @@ and alternatives. See [APPENDIX.md](APPENDIX.md) for the design rationale and te
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-streamlit run app.py                       # salesperson UI
+python api.py                              # the app: http://localhost:8611 (React UI + API)
+streamlit run app.py --server.port 8612    # backup UI in pure Python
 python cli.py "20 people, 4 hours, coffee and lunch are required. Total budget €850."
-python -m pytest -q                        # 37 tests (engine, extractor, guardrail, LLM mock, MCP)
+python -m pytest -q                        # 41 tests (engine, extractor, guardrail, LLM mock, MCP, API)
 python -m eval.run_eval --offline          # 16 designed tests  -> eval/results_prototype.md
 python -m eval.run_eval --offline --cases heldout_cases.json   # independent set 1
 python -m eval.run_eval --offline --cases blind2_cases.json    # independent set 2
@@ -41,7 +42,15 @@ python -m eval.run_eval --offline --cases blind2_cases.json    # independent set
 
 ![Infeasible request: status, budget margin, brief, checks, client draft and alternatives](docs/screenshot-infeasible.png)
 
-Demo deep links: `http://localhost:8501/?case=T02` loads and runs a test enquiry (any id from `eval/cases.json`).
+Demo deep links: `http://localhost:8611/?case=T02` loads and runs a test enquiry (any id from `eval/cases.json`).
+
+## Front end
+
+The main UI is a React app (`web/`: Vite, Tailwind, Framer Motion, Lucide icons) served by a small FastAPI backend
+(`api.py`) that wraps the same engine. The built files are committed in `web/dist`, so `python api.py` is all you
+need. To change the UI: install Node 20+, then `cd web && npm install && npm run build` (or `npm run dev` with
+`uvicorn api:app --port 8000` for hot reload). The front end never computes a price; it only displays what
+`/api/analyse` returns.
 
 ## MCP server — use the engine from Claude
 
@@ -81,12 +90,15 @@ brightroom/
   pipeline.py       enquiry -> brief -> evaluation -> draft
   mcp_server.py     MCP server (tools, resource, prompt) over the same engine
   serialize.py      plain-dict views used by the MCP server
-app.py              Streamlit UI (review + explicit approval step)
+api.py              FastAPI: /api/analyse, /api/eval, /api/cases; serves the React app
+web/                React + Framer Motion front end (source in web/src, build in web/dist)
+app.py              Streamlit UI (backup, pure Python)
 cli.py              command line
 eval/               test cases, runner, baseline prompt + outputs, results
 tests/              pytest (engine, extractor, guardrail, mocked LLM path, MCP server)
 docs/               screenshots
 DEMO_SCRIPT.md      4-minute demo video script
+demo/               narration text + script that records the narrated demo video (python demo/record.py)
 ```
 
 All company data, enquiries and records are fictional teaching material from the case. Additional test enquiries

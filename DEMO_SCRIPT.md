@@ -1,9 +1,9 @@
 # Demo video script (target 4 minutes)
 
 Setup before recording: set `ANTHROPIC_API_KEY` locally, leave `BRIGHTROOM_OFFLINE` unset, then run
-`streamlit run app.py` with the browser at full width (zoom 90 %). Select cases in the app; demo deep links run
+`python api.py` and open http://localhost:8611 with the browser at full width. Select cases in the app; demo deep links run
 automatically and would make extra API calls. Use Claude only for T02; switch it off for the other cases.
-The **Test evidence** tab has a live "Re-run all 36 tests" button for the results section.
+The **Test evidence** page has a live "Run all tests" button for the results section.
 
 ---
 
@@ -41,7 +41,7 @@ The **Test evidence** tab has a live "Re-run all 36 tests" button for the result
   required, over budget, never the Studio.
 
 **3:00–3:45 · Evidence**
-- Open the **Test evidence** tab, click **Re-run all 36 tests now** (all pass in under a second), and scroll the
+- Open the **Test evidence** tab, click **Run all tests** (36 squares fill in green), and scroll the
   baseline vs prototype table.
 > "On 16 designed tests the prototype passes 16 out of 16; the single-prompt baseline passes 12, with 2 partial and
 > 2 failures. The baseline's arithmetic was right every time; its failures were promises and scope: 'we can confirm
