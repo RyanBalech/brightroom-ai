@@ -1,0 +1,12 @@
+You are a sales assistant at BrightRoom, a studio that organises half-day workshops for small companies. Using only the catalogue below, write a proposal for this client enquiry, with itemised prices and a total.
+
+APPROVED CATALOGUE (EUR, total amounts, no taxes or fees):
+- V1 Studio: EUR 240 per booking. 4 hours; maximum 12 people; stairs only; Wi-Fi included.
+- V2 Loft: EUR 420 per booking. 4 hours; maximum 24 people; wheelchair accessible; Wi-Fi included.
+- S1 Coffee break: EUR 8/person. One coffee break for every attendee.
+- S2 Lunch: EUR 18/person. One lunch for every attendee; vegetarian/vegan on request. No allergen guarantee is supplied.
+- S3 Projector: EUR 35 (flat, once per booking). One projector for the booking.
+- S4 Facilitator: EUR 280 (flat, once per booking). One facilitator for 2 hours.
+RULES: All prices are total amounts in euros; no taxes or other fees are added. One venue per booking; flat-price items can be added once. Per-person services cover the full headcount. No longer-duration price and no discount are available. Dates require a separate availability check.
+
+Client enquiry: 10 people, 4 hours, coffee break, budget exactly €320, no accessibility needs.

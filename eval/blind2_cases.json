@@ -1,0 +1,128 @@
+[
+  {
+    "id": "H11",
+    "source": "blind set 2 (independent agent)",
+    "type": "exactly 12 (a dozen), Studio, stairs OK",
+    "enquiry": "hey brightroom! quick one - there's a dozen of us (product team) wanting a half day off-site, 4 hrs, sometime in november. we'd want coffee + lunch for everyone (2 of us are vegetarian), and a projector for slides. stairs are totally fine, nobody has mobility issues. we can spend 700 euros max. cheers, Tom",
+    "expected": {
+      "status": ["READY_FOR_REVIEW"],
+      "total": 587,
+      "venue": "V1",
+      "within_budget": true,
+      "behaviour": "12 people fits the Studio (max 12, stairs confirmed OK): 240 + coffee 12x8=96 + lunch 12x18=216 + projector 35 = 587 <= 700; vegetarian on request is fine; date needs separate availability check."
+    }
+  },
+  {
+    "id": "H12",
+    "source": "blind set 2 (independent agent)",
+    "type": "exactly 24, wheelchair, full package",
+    "enquiry": "Dear BrightRoom team,\n\nWe are planning a strategy workshop for twenty-four colleagues, 9:00 to 13:00. One participant uses a wheelchair, so step-free access is essential. Please include a coffee break and lunch for all attendees, the projector, and your facilitator for a 2-hour session. Our budget is 1500EUR.\n\nKind regards,\nMarta Silva, Operations",
+    "expected": {
+      "status": ["READY_FOR_REVIEW"],
+      "total": 1359,
+      "venue": "V2",
+      "within_budget": true,
+      "behaviour": "24 people at the capacity limit and wheelchair access -> Loft: 420 + coffee 24x8=192 + lunch 24x18=432 + projector 35 + facilitator 280 = 1359 <= 1500."
+    }
+  },
+  {
+    "id": "H13",
+    "source": "blind set 2 (independent agent)",
+    "type": "budget per head, over budget",
+    "enquiry": "Hello, we're 15 people from the finance dept looking for a 4-hour workshop room. Coffee break and lunch for everyone please. Our policy allows €40 per head for the whole thing, all in. Does that work?",
+    "expected": {
+      "status": ["INFEASIBLE"],
+      "total": 810,
+      "venue": "V2",
+      "within_budget": false,
+      "behaviour": "15 people needs the Loft: 420 + (8+18)x15=390 = 810, but the budget is 40x15 = 600, so 810 > 600 and the request is over budget; no discount may be offered."
+    }
+  },
+  {
+    "id": "H14",
+    "source": "blind set 2 (independent agent)",
+    "type": "French/English mix, no lunch",
+    "enquiry": "Bonjour ! On est une équipe de 10 personnes, we'd like a room for une demi-journée (4 heures). Juste un café pour tout le monde, no lunch needed, on mangera après. Il nous faut aussi un projecteur. L'escalier ne pose aucun problème pour nous. Budget: 900EUR max. Merci !",
+    "expected": {
+      "status": ["READY_FOR_REVIEW"],
+      "total": 355,
+      "venue": "V1",
+      "within_budget": true,
+      "behaviour": "10 people with stairs explicitly fine -> Studio: 240 + coffee 10x8=80 + projector 35 = 355 <= 900; lunch must NOT be included."
+    }
+  },
+  {
+    "id": "H15",
+    "source": "blind set 2 (independent agent)",
+    "type": "long rambling, 30 people",
+    "enquiry": "Hi there, so I've been asked by my manager (who is on holiday, of course) to sort out our team away-day, and honestly I've never done this before so bear with me. We're the whole customer success org which is about thirty people now since we merged with the Lyon team - actually exactly 30, I just checked the list. We were thinking a half day, 4 hours is plenty, people get tired. Coffee would be good, and lunch, nothing fancy. Someone mentioned you have a facilitator? That might be nice for an hour or two. Budget-wise I think we have around 2000 euros but I'd need to double check. Oh and we definitely all need to be in the same room, it's a team-building thing so splitting up defeats the point. Let me know what's possible! Thanks so much, Julie",
+    "expected": {
+      "status": ["INFEASIBLE"],
+      "total": null,
+      "behaviour": "30 people exceeds the Loft maximum of 24 and only one venue per booking is allowed (and the group must stay together), so no package can be priced."
+    }
+  },
+  {
+    "id": "H16",
+    "source": "blind set 2 (independent agent)",
+    "type": "optional non-catalogue item 'if possible'",
+    "enquiry": "Morning! Looking to book a 4h session for 18 ppl. Coffee for all, we'll sort our own lunch. If possible we'd also love a photographer to take a few team shots, but it's not a dealbreaker. Budget €1k. Thx, Sam",
+    "expected": {
+      "status": ["PROVISIONAL"],
+      "total": 564,
+      "venue": "V2",
+      "within_budget": true,
+      "behaviour": "18 people needs the Loft: 420 + coffee 18x8=144 = 564 <= 1000; the photographer is not in the catalogue and is optional, so it is excluded and flagged, not priced."
+    }
+  },
+  {
+    "id": "H17",
+    "source": "blind set 2 (independent agent)",
+    "type": "budget exactly equals total",
+    "enquiry": "We need a room for a 4-hour training on 3 December for 20 participants, one of whom is a wheelchair user. Coffee break and lunch for all 20, plus the projector. Our approved budget is exactly €975, we cannot go a cent over.",
+    "expected": {
+      "status": ["READY_FOR_REVIEW"],
+      "total": 975,
+      "venue": "V2",
+      "within_budget": true,
+      "behaviour": "Loft for 20 with wheelchair access: 420 + (8+18)x20=520 + projector 35 = 975, exactly equal to the 975 budget so within budget; date needs separate availability check."
+    }
+  },
+  {
+    "id": "H18",
+    "source": "blind set 2 (independent agent)",
+    "type": "headcount unknown, typos",
+    "enquiry": "hiya, wed like to book somthing for the whole sales team, not sure how many yet tbh people keep joining lol. half day, 4 hours, coffe and lunch, projecter. budget is aroud 1200. can u send a quote?",
+    "expected": {
+      "status": ["NEEDS_CLARIFICATION"],
+      "total": null,
+      "behaviour": "Headcount is unknown so venue and per-person services cannot be priced; the tool must ask how many people will attend rather than quote."
+    }
+  },
+  {
+    "id": "H19",
+    "source": "blind set 2 (independent agent)",
+    "type": "approximate headcount",
+    "enquiry": "Hi BrightRoom, we're looking at roughly twenty-two people, give or take one or two depending on who's travelling. 4-hour workshop, coffee and lunch for everyone, and we need wheelchair access. Budget is €1,200. Could you put something together?",
+    "expected": {
+      "status": ["PROVISIONAL"],
+      "total": 992,
+      "venue": "V2",
+      "within_budget": true,
+      "behaviour": "Priced at 22 people in the Loft: 420 + (8+18)x22=572 = 992 <= 1200 (even 24 would be 420+624=1044 <= 1200), but the headcount is approximate so the proposal is provisional."
+    }
+  },
+  {
+    "id": "H20",
+    "source": "blind set 2 (independent agent)",
+    "type": "allergen guarantee with lunch",
+    "enquiry": "Hello, 9 of us for a 4-hour planning session. The stairs are fine. We'd like coffee and lunch for everyone, BUT one colleague has coeliac disease so we need a guarantee that the lunch is completely gluten-free with no cross-contamination - this is non-negotiable. Budget 600 euros.",
+    "expected": {
+      "status": ["INFEASIBLE"],
+      "total": 474,
+      "venue": "V1",
+      "within_budget": true,
+      "behaviour": "Studio for 9 (stairs fine): 240 + (8+18)x9=234 = 474 <= 600, but the lunch has no allergen guarantee and the client requires one, so the request is infeasible as stated."
+    }
+  }
+]

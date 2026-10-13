@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "brightroom": {
+      "command": ".venv/bin/python",
+      "args": ["-m", "brightroom.mcp_server"]
+    }
+  }
+}

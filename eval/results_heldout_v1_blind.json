@@ -1,0 +1,152 @@
+[
+ {
+  "id": "H01",
+  "pass": false,
+  "fails": [
+   "status INFEASIBLE not in ['READY_FOR_REVIEW']",
+   "total 715 != 535",
+   "venue V2 != V1",
+   "budget fit wrong (margin -15.0)"
+  ],
+  "status": "INFEASIBLE",
+  "total": 715,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.003,
+  "llm_errors": [],
+  "review_md": "### 🔴 Cannot meet the brief as stated — do not send the package as-is\nTotal €715 vs budget €700 → **€15 OVER budget**\n\n- ⛔ **BUDGET** — Package total €715 exceeds the budget of €700 by €15.\n\n- Studio (€240) is cheaper but was excluded: not wheelchair accessible (stairs only).",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. We have checked it carefully against our catalogue and, as stated, we cannot meet every requirement: Package total €715 exceeds the budget of €700 by €15. Rather than change your request silently, we list realistic alternatives below, each with its trade-offs, so you can choose what matters most.\n\n#### Package for the request as stated (does not meet the brief)\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 10 | €80 |\n| S2 · Lunch | €18/person | 10 | €180 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (10 people)** | | | **€715** |\n\n#### Alternatives — each one changes your request\n**Option 1: 9 people, all requested services — €689 · within budget**\nTrade-offs: Reduce the group from 10 to 9 people.\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 9 | €72 |\n| S2 · Lunch | €18/person | 9 | €162 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (9 people)** | | | **€689** |\n\n**Option 2: Package without projector — €680 · within budget**\nTrade-offs: Remove projector (a requested service).\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 10 | €80 |\n| S2 · Lunch | €18/person | 10 | €180 |\n| **Total (10 people)** | | | **€680** |\n\n**Option 3: Package without coffee break — €635 · within budget**\nTrade-offs: Remove coffee break (a requested service).\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S2 · Lunch | €18/person | 10 | €180 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (10 people)** | | | **€635** |\n\n**Option 4: Package without lunch — €535 · within budget**\nTrade-offs: Remove lunch (a requested service).\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 10 | €80 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (10 people)** | | | **€535** |\n\n**Option 5: Package — keep all services, raise budget — €715 · **above budget****\nTrade-offs: Budget raised from €700 to €715 (+€15) — client must approve.\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 10 | €80 |\n| S2 · Lunch | €18/person | 10 | €180 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (10 people)** | | | **€715** |\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking.\n- Lunch: vegetarian/vegan on request; no allergen guarantee is supplied."
+ },
+ {
+  "id": "H02",
+  "pass": true,
+  "fails": [],
+  "status": "READY_FOR_REVIEW",
+  "total": 860,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.001,
+  "llm_errors": [],
+  "review_md": "### 🟢 Feasible draft — ready for salesperson review\nTotal €860 vs budget €1 200 → **€340 under budget**\n\n- Studio (€240) is cheaper but was excluded: holds at most 12 people.",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. Based on our catalogue, we suggest the Loft for your group of 20, with the itemised package below. This is a draft quote; the date is subject to an availability check.\n\n#### Proposed package\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 20 | €160 |\n| S4 · Facilitator | €280 | 1 | €280 |\n| **Total (20 people)** | | | **€860** |\n\nYour budget: €1 200 · within budget by €340.\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking."
+ },
+ {
+  "id": "H03",
+  "pass": true,
+  "fails": [],
+  "status": "NEEDS_CLARIFICATION",
+  "total": null,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.001,
+  "llm_errors": [],
+  "review_md": "### 🔵 Clarification needed — no proposal yet\n\n- ℹ️ **DATE** — Requested timing 'next month' — availability must be checked separately; do not promise the date.",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. To prepare an accurate proposal from our catalogue we need a few details first — please see the questions below. As soon as we have them we will send an itemised quote.\n\n#### Questions\n1. How many people will attend? (Venue choice and every per-person price depend on it.)\n2. How long should the workshop last? Our bookings are half-day blocks of 4 hours.\n3. What total budget (EUR, all-inclusive) should the package stay within?\n4. Does anyone need step-free / wheelchair access?\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking."
+ },
+ {
+  "id": "H04",
+  "pass": false,
+  "fails": [
+   "status NEEDS_CLARIFICATION not in ['PROVISIONAL']",
+   "total None != 455",
+   "venue None != V2"
+  ],
+  "status": "NEEDS_CLARIFICATION",
+  "total": null,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.0,
+  "llm_errors": [],
+  "review_md": "### 🔵 Clarification needed — no proposal yet",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. To prepare an accurate proposal from our catalogue we need a few details first — please see the questions below. As soon as we have them we will send an itemised quote.\n\n#### Questions\n1. How many people will attend? (Venue choice and every per-person price depend on it.)\n2. How long should the workshop last? Our bookings are half-day blocks of 4 hours.\n3. What total budget (EUR, all-inclusive) should the package stay within?\n4. Does anyone need step-free / wheelchair access?\n5. Which date(s) would you like? We will check availability before confirming.\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking."
+ },
+ {
+  "id": "H05",
+  "pass": true,
+  "fails": [],
+  "status": "READY_FOR_REVIEW",
+  "total": 628,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.0,
+  "llm_errors": [],
+  "review_md": "### 🟢 Feasible draft — ready for salesperson review\nTotal €628 vs budget €800 → **€172 under budget**\n\n- Vegetarian option to be requested with the lunch order.\n- Studio (€240) is cheaper but was excluded: not wheelchair accessible (stairs only).",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. Based on our catalogue, we suggest the Loft for your group of 8, with the itemised package below. This is a draft quote; the date is subject to an availability check.\n\n#### Proposed package\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 8 | €64 |\n| S2 · Lunch | €18/person | 8 | €144 |\n| **Total (8 people)** | | | **€628** |\n\nYour budget: €800 · within budget by €172.\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking.\n- Lunch: vegetarian/vegan on request; no allergen guarantee is supplied."
+ },
+ {
+  "id": "H06",
+  "pass": true,
+  "fails": [],
+  "status": "INFEASIBLE",
+  "total": 1027,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.0,
+  "llm_errors": [],
+  "review_md": "### 🔴 Cannot meet the brief as stated — do not send the package as-is\nTotal €1 027 vs budget €900 → **€127 OVER budget**\n\n- ⛔ **BUDGET** — Package total €1027 exceeds the budget of €900 by €127.\n\n- Studio (€240) is cheaper but was excluded: holds at most 12 people.",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. We have checked it carefully against our catalogue and, as stated, we cannot meet every requirement: Package total €1027 exceeds the budget of €900 by €127. Rather than change your request silently, we list realistic alternatives below, each with its trade-offs, so you can choose what matters most.\n\n#### Package for the request as stated (does not meet the brief)\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 22 | €176 |\n| S2 · Lunch | €18/person | 22 | €396 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (22 people)** | | | **€1 027** |\n\n#### Alternatives — each one changes your request\n**Option 1: 17 people, all requested services — €897 · within budget**\nTrade-offs: Reduce the group from 22 to 17 people.\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 17 | €136 |\n| S2 · Lunch | €18/person | 17 | €306 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (17 people)** | | | **€897** |\n\n**Option 2: Package without coffee break — €851 · within budget**\nTrade-offs: Remove coffee break (a requested service).\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S2 · Lunch | €18/person | 22 | €396 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (22 people)** | | | **€851** |\n\n**Option 3: Package without lunch — €631 · within budget**\nTrade-offs: Remove lunch (a requested service).\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 22 | €176 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (22 people)** | | | **€631** |\n\n**Option 4: Package — keep all services, raise budget — €1 027 · **above budget****\nTrade-offs: Budget raised from €900 to €1027 (+€127) — client must approve.\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V2 · Loft (venue, 4 h) | €420 | 1 | €420 |\n| S1 · Coffee break | €8/person | 22 | €176 |\n| S2 · Lunch | €18/person | 22 | €396 |\n| S3 · Projector | €35 | 1 | €35 |\n| **Total (22 people)** | | | **€1 027** |\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking.\n- Lunch: vegetarian/vegan on request; no allergen guarantee is supplied."
+ },
+ {
+  "id": "H07",
+  "pass": false,
+  "fails": [
+   "status PROVISIONAL not in ['INFEASIBLE']",
+   "total 288 != 468",
+   "venue V1 != V2",
+   "budget fit wrong (margin 12.0)"
+  ],
+  "status": "PROVISIONAL",
+  "total": 288,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.0,
+  "llm_errors": [],
+  "review_md": "### 🟡 Provisional proposal — check the labelled assumptions\nTotal €288 vs budget €300 → **€12 under budget**",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. Based on our catalogue, we suggest the Studio for your group of 6, with the itemised package below. Some points were not stated in your message, so we noted our assumptions and a few questions below. This is a draft quote; the date is subject to an availability check.\n\n#### Proposed package\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V1 · Studio (venue, 4 h) | €240 | 1 | €240 |\n| S1 · Coffee break | €8/person | 6 | €48 |\n| **Total (6 people)** | | | **€288** |\n\nYour budget: €300 · within budget by €12.\n\n#### Assumptions (please correct us)\n- Accessibility not mentioned — Studio is stairs-only.\n\n#### Questions\n1. Does anyone need step-free access? The proposed Studio is reachable by stairs only (the accessible Loft costs €180 more).\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking."
+ },
+ {
+  "id": "H08",
+  "pass": false,
+  "fails": [
+   "status PROVISIONAL not in ['INFEASIBLE']"
+  ],
+  "status": "PROVISIONAL",
+  "total": 336,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.0,
+  "llm_errors": [],
+  "review_md": "### 🟡 Provisional proposal — check the labelled assumptions",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. Based on our catalogue, we suggest the Studio for your group of 12, with the itemised package below. Some points were not stated in your message, so we noted our assumptions and a few questions below. This is a draft quote; the date is subject to an availability check.\n\n#### Proposed package\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V1 · Studio (venue, 4 h) | €240 | 1 | €240 |\n| S1 · Coffee break | €8/person | 12 | €96 |\n| **Total (12 people)** | | | **€336** |\n\n#### Assumptions (please correct us)\n- No budget stated — budget fit not checked.\n- Accessibility not mentioned — Studio is stairs-only.\n\n#### Questions\n1. What is the maximum total budget (EUR)?\n2. Does anyone need step-free access? The proposed Studio is reachable by stairs only (the accessible Loft costs €180 more).\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking."
+ },
+ {
+  "id": "H09",
+  "pass": false,
+  "fails": [
+   "status NEEDS_CLARIFICATION not in ['READY_FOR_REVIEW']",
+   "total None != 970",
+   "venue None != V2"
+  ],
+  "status": "NEEDS_CLARIFICATION",
+  "total": null,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.0,
+  "llm_errors": [],
+  "review_md": "### 🔵 Clarification needed — no proposal yet",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. To prepare an accurate proposal from our catalogue we need a few details first — please see the questions below. As soon as we have them we will send an itemised quote.\n\n#### Questions\n1. How many people will attend? (Venue choice and every per-person price depend on it.)\n2. How long should the workshop last? Our bookings are half-day blocks of 4 hours.\n3. What total budget (EUR, all-inclusive) should the package stay within?\n4. Does anyone need step-free / wheelchair access?\n5. Which date(s) would you like? We will check availability before confirming.\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking."
+ },
+ {
+  "id": "H10",
+  "pass": true,
+  "fails": [],
+  "status": "INFEASIBLE",
+  "total": 402,
+  "extractor": "rules",
+  "cover_source": "template",
+  "seconds": 0.0,
+  "llm_errors": [],
+  "review_md": "### 🔴 Cannot meet the brief as stated — do not send the package as-is\nTotal €402 vs budget €500 → **€98 under budget**\n\n- ⛔ **ALLERGEN** — An allergen guarantee was requested; BrightRoom supplies no allergen guarantee for catering.",
+  "client_md": "**DRAFT — for salesperson approval. Not sent. Nothing is booked.**\n\nThank you for your enquiry. We have checked it carefully against our catalogue and, as stated, we cannot meet every requirement: An allergen guarantee was requested; BrightRoom supplies no allergen guarantee for catering. Rather than change your request silently, we list realistic alternatives below, each with its trade-offs, so you can choose what matters most.\n\n#### Package for the request as stated (does not meet the brief)\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V1 · Studio (venue, 4 h) | €240 | 1 | €240 |\n| S2 · Lunch | €18/person | 9 | €162 |\n| **Total (9 people)** | | | **€402** |\n\n#### Alternatives — each one changes your request\n**Option 1: Package — €402 · within budget**\nTrade-offs: Catering without an allergen guarantee — only if the client explicitly accepts that; Uses the Studio (stairs only) — check nobody needs step-free access.\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V1 · Studio (venue, 4 h) | €240 | 1 | €240 |\n| S2 · Lunch | €18/person | 9 | €162 |\n| **Total (9 people)** | | | **€402** |\n\n**Option 2: Package without catering — €240 · within budget**\nTrade-offs: Remove catering (lunch) — no allergen guarantee can be given; Uses the Studio (stairs only) — check nobody needs step-free access.\n\n| Item | Unit price | Qty | Amount |\n|---|---:|---:|---:|\n| V1 · Studio (venue, 4 h) | €240 | 1 | €240 |\n| **Total (9 people)** | | | **€240** |\n\n#### Assumptions (please correct us)\n- Accessibility not mentioned — Studio is stairs-only.\n\n#### Questions\n1. Does anyone need step-free access? The proposed Studio is reachable by stairs only (the accessible Loft costs €180 more).\n\n#### Notes\n- Prices are total amounts in euros from our catalogue; no taxes or other fees are added.\n- Dates and venue availability are not confirmed; this is not a booking.\n- Lunch: vegetarian/vegan on request; no allergen guarantee is supplied."
+ }
+]
