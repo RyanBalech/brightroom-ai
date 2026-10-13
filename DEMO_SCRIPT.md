@@ -1,6 +1,7 @@
 # Demo video script (target 4 minutes)
 
-Setup before recording: `streamlit run app.py`, browser at full width (zoom 90 %). Pre-open tabs with deep links
+Setup before recording: set `BRIGHTROOM_OFFLINE=1`, then run `streamlit run app.py` with the browser at full width
+(zoom 90 %). Pre-open tabs with deep links
 so each case loads instantly: `localhost:8501/?case=T03`, `?case=T02`, `?case=T05`, `?case=T04`.
 The **Test evidence** tab has a live "Re-run all 36 tests" button for the results section.
 
@@ -52,5 +53,5 @@ Show the How it works tab.
 
 **3:45–4:00 · Limitations and next step**
 > "The rules extractor is brittle on open-vocabulary requests; that's where the Claude extractor comes in, and it's
-> cross-checked against the rules. Mocked tests pass, but live Claude behaviour remains unverified. Next: evaluate
-> it live, measure salesperson review time, and add availability checks."
+> cross-checked against the rules. One live Q2 check passed; the other 35 cases have only offline or mocked results.
+> Next: measure salesperson review time and add availability checks."

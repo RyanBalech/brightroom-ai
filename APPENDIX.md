@@ -140,15 +140,16 @@ and keeps a human approval step.
 | Strict pass (rubric) | n/a | 12 / 16 = 75 % | 16 / 16 designed; 5/10 → 6–7/10 on blind runs (measured) |
 | Forbidden promises / invented figures | n/a | 4 cases (T04, T05, T12, T16) | 0 (guardrail-tested) |
 | Feasibility visible before reading prose | no | no (buried in text) | yes (status + metrics) |
-| Preparation time per enquiry | ~10–20 min **(estimate, not measured)** | ~10–20 s generation + full read-through **(estimate)** | 0.01 s rules-only (measured); Claude mode ~5–15 s for 2 calls **(estimate, not measured)**; review ~2 min **(estimate)** |
+| Preparation time per enquiry | ~10–20 min **(estimate, not measured)** | ~10–20 s generation + full read-through **(estimate)** | 0.01 s rules-only (measured); one live Claude Q2 run took 14.76 s for 2 calls (single observation); review ~2 min **(estimate)** |
 | Running cost per enquiry | salesperson time | ~1 Opus call | €0 rules-only; Claude mode ≈ 2.5k input + 0.7k output tokens ≈ **$0.03 at Opus 5 list prices (estimate)** |
 | Reproducibility | varies by person | varies run to run | deterministic engine; LLM only for extraction and prose |
 
 ### 3.4 Limitations (honest)
-- **The Claude path was not run live in this sprint.** No API key was available on the build machine. It is
-  implemented, schema-validated and unit-tested with a mocked client (grounding, cross-check, guardrail, API-failure
-  fallback), but extraction quality with Claude is **unmeasured**. The baseline outputs were produced by Claude
-  sub-agents answering the exact baseline prompt, not through the API.
+- **Live Claude evidence is limited to one smoke test.** On 13 October 2026, Q2 returned INFEASIBLE and €940
+  with `llm+rules` extraction and an LLM cover note; there were no API errors or text-audit violations. The other
+  35 enquiries have not been evaluated with live Claude, so its general extraction quality remains unverified.
+  Mocked tests cover grounding, cross-check, guardrail and API-failure fallback. The baseline outputs were produced
+  by Claude sub-agents answering the exact baseline prompt, not through the API.
 - The rule extractor is brittle on unseen phrasing (blind runs above). It is a fallback, not the intended
   production extractor.
 - Baseline: one sample per case, graded by the builder. Raw outputs are included so a human can re-grade.
