@@ -1,7 +1,7 @@
 # Appendix · Case 02 — From a client enquiry to a feasible proposal
 
 **Team:** Romaissae Melhaoui · Ryan Balech  
-**Contributions:** Romaissae Melhaoui — _[contribution]_ · Ryan Balech — _[contribution]_ (prototype built with Claude Code as coding assistant)
+**Contributions:** both members worked together on every part — scoping, design, building the prototype, testing and the demo video (prototype built with Claude Code as coding assistant).
 **Tools used:** Claude Code (Claude Opus 5.5) for building; Python 3.13, Streamlit 1.65, Anthropic Python SDK 1.13, MCP Python SDK 2.3;
 runtime LLM (optional) `claude-opus-5`.
 **Data:** the fictional catalogue and enquiries Q1–Q5 from the case pack. Every other enquiry is a labelled
